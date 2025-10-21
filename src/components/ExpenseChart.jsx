@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { useExpenses } from "../context/ExpenseContext";
-import { getChartData, getExpensesByMonth } from "../utils/expenses";
+import { getChartData, getExpensesByMonth } from "../utils/expense";
 import { BarChart, PieChart } from "lucide-react";
 import ExpensePieChart from "./ExpensePieChart";
 import ExpenseBarChart from "./ExpenseBarChart";
+import { useExpenses } from "../context/Expensecontext";
 
 const ExpenseChart = () => {
   const { expenses } = useExpenses();

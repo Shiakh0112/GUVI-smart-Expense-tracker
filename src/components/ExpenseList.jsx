@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { useExpenses } from "../context/ExpenseContext";
 import toast from "react-hot-toast";
 import {
   formatCurrency,
   formatDate,
   getCategoryTextColor,
-} from "../utils/expenses";
+} from "../utils/expense";
 import { Trash2 } from "lucide-react";
+import { useExpenses } from "../context/Expensecontext";
 
 const ExpenseList = () => {
   const { expenses, deleteExpense } = useExpenses();

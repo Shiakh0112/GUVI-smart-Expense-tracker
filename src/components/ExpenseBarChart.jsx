@@ -1,5 +1,5 @@
 import React from "react";
-import { formatCurrency } from "../utils/expenses";
+import { formatCurrency } from "../utils/expense";
 import {
   Bar,
   BarChart,

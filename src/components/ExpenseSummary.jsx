@@ -1,11 +1,11 @@
 import React from "react";
-import { useExpenses } from "../context/ExpenseContext";
 import {
   formatCurrency,
   getExpensesByCategory,
   getTotalExpenses,
-} from "../utils/expenses";
+} from "../utils/expense";
 import { TrendingDown, TrendingUp, Wallet } from "lucide-react";
+import { useExpenses } from "../context/Expensecontext";
 
 const ExpenseSummary = () => {
   const { expenses } = useExpenses();
