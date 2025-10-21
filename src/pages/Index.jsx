@@ -4,14 +4,14 @@ import DashboardLayout from "../layouts/DashboardLayout";
 
 const Index = () => {
   return (
-    <>
+    <div>
       <ExpenseProvider>
         <DashboardLayout>
           <Dashboard />
         </DashboardLayout>
       </ExpenseProvider>
       ;
-    </>
+    </div>
   );
 };
 export default Index;
