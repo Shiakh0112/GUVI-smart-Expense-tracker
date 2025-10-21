@@ -1,5 +1,5 @@
 import React from "react";
-import { useExpenses } from "../context/Expensecontext";
+import { useExpenses } from "../context/ExpenseContext";
 import {
   formatCurrency,
   getExpensesByCategory,
