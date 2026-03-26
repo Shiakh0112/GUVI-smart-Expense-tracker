@@ -29,9 +29,9 @@ const ExpenseBarChart = ({ data }) => {
   const CustomTooltip = ({ active, payload, label }) => {
     if (active && payload && payload.length) {
       return (
-        <div className="bg-white p-4 rounded-md shadow-md border border-gray-100">
+        <div className="bg-[#1e1040] p-4 rounded-xl shadow-glass border border-white/10 text-slate-200">
           <p className="font-medium">{label}</p>
-          <p className="text-lg">{formatCurrency(payload[0].value)}</p>
+          <p className="text-lg font-bold text-violet-300">{formatCurrency(payload[0].value)}</p>
         </div>
       );
     }
@@ -49,19 +49,17 @@ const ExpenseBarChart = ({ data }) => {
           bottom: 60,
         }}
       >
-        <CartesianGrid strokeDasharray="3 3" vertical={false} />
+        <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="rgba(255,255,255,0.07)" />
         <XAxis
           dataKey="name"
           angle={-45}
           textAnchor="end"
           height={60}
-          tick={{ fontSize: 12 }}
+          tick={{ fontSize: 12, fill: "#94a3b8" }}
         />
         <YAxis
           tickFormatter={(value) => `₹${value}`}
-          tick={{
-            fontSize: 12,
-          }}
+          tick={{ fontSize: 12, fill: "#94a3b8" }}
         />
         <Tooltip content={<CustomTooltip />} />
         <Bar

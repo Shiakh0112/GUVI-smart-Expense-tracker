@@ -38,11 +38,11 @@ const ExpensePieChart = ({ data }) => {
       const percentage = ((value / total) * 100).toFixed(0);
 
       return (
-        <div className="bg-white p-4 rounded-md shadow-md border border-gray-100">
+        <div className="bg-[#1e1040] p-4 rounded-xl shadow-glass border border-white/10 text-slate-200">
           <p className="font-medium">{name}</p>
-          <p className="text-lg">
+          <p className="text-lg font-bold text-violet-300">
             ₹{value.toFixed(2)}
-            <span className="text-sm text-gray-500 ml-1">({percentage}%)</span>
+            <span className="text-sm text-slate-400 ml-1">({percentage}%)</span>
           </p>
         </div>
       );
@@ -75,7 +75,7 @@ const ExpensePieChart = ({ data }) => {
           verticalAlign="bottom"
           align="center"
           formatter={(value) => (
-            <span className="text-sm font-medium">{value}</span>
+            <span style={{ color: "#94a3b8", fontSize: "12px", fontWeight: 500 }}>{value}</span>
           )}
         />
       </PieChart>
